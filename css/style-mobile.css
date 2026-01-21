@@ -1,0 +1,12 @@
+@media (max-width: 600px) {
+	.hero-title {
+		font-size: 2.2rem;
+		padding: 0 4vw;
+		line-height: 1.1;
+		word-break: break-word;
+	}
+}
+/* ===== STYLE MOBILE ===== */
+
+/* Mobile igual ao style de computador */
+@import url('style.css');
