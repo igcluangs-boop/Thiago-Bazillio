@@ -110,7 +110,7 @@
                         <li>✅ Espaço para anotações de cargas</li>
                         <li>✅ Suporte direto comigo</li>
                     </ul>
-                    <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" class="plan-button">COMEÇAR AGORA</a>
+                    <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" class="plan-button">Comprar agora</a>
                 </div>
                 <div class="plan-card">
                     <h3>CONSULTORIA PERSONALIZADA</h3>
@@ -128,7 +128,7 @@
                         <li>✅ Suporte prioritário</li>
                         <li>✅ Orientação nutricional básica</li>
                     </ul>
-                    <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" class="plan-button">COMEÇAR AGORA</a>
+                    <a href="https://wa.me/5511979891379?text=Olá!%20Tenho%20interesse%20na%20Consultoria%20Personalizada." target="_blank" class="plan-button">Começar agora</a>
                 </div>
                 <div class="plan-card">
                     <h3>TREINO EM CASA</h3>
@@ -146,7 +146,7 @@
                         <li>✅ Treinos de 30-45 minutos</li>
                         <li>✅ Ideal para iniciantes</li>
                     </ul>
-                    <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" class="plan-button">COMEÇAR AGORA</a>
+                    <a href="https://wa.me/5511979891379?text=Olá!%20Tenho%20interesse%20no%20Treino%20em%20Casa." target="_blank" class="plan-button">Começar agora</a>
                 </div>
             </div>
         </div>
@@ -233,7 +233,7 @@
             <h2 class="section-title">FALE COMIGO</h2>
             <p class="contact-intro">Pronta para transformar seu corpo? Preencha o formulário abaixo e vamos conversar sobre seus objetivos!</p>
             
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xxxxxxx" method="POST">
                 <div class="form-group">
                     <input type="text" name="nome" placeholder="Seu Nome" required>
                 </div>
@@ -263,7 +263,7 @@
     <!-- FOOTER -->
     <footer class="footer">
         <img src="img/2.0.png" width="50" alt="Thiago Bazillio" class="footer-logo">
-        <p>&copy; 2024 Thiago Bazillio - Personal Trainer | Todos os direitos reservados</p>
+        <p>&copy; 2026 Thiago Bazillio - Personal Trainer | Todos os direitos reservados</p>
         <p style="font-size: 0.85rem; margin-top: 10px; color: var(--gray);">prof_thiagobazilio@hotmail.com</p>
     </footer>
 
@@ -276,7 +276,28 @@
         <ion-icon name="logo-whatsapp"></ion-icon>
     </a>
 
-    <script src="js/script-index.js"></script>
+        <script src="js/script-index.js"></script>
+        <script>
+        // Feedback de envio para Formspree
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset();
+                    alert('Mensagem enviada com sucesso! Em breve entrarei em contato.');
+                } else {
+                    alert('Erro ao enviar. Tente novamente ou fale pelo WhatsApp.');
+                }
+            }).catch(() => {
+                alert('Erro ao enviar. Tente novamente ou fale pelo WhatsApp.');
+            });
+        });
+        </script>
         <!-- MODAL DE IMAGEM EM TELA CHEIA -->
         <div id="modal-imagem" style="display:none;position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:rgba(10,10,10,0.97);align-items:center;justify-content:center;transition:opacity 0.3s;pointer-events:auto;">
             <span id="fechar-modal-imagem" style="position:absolute;top:30px;right:40px;font-size:3rem;color:#00ffd0;cursor:pointer;font-family:sans-serif;z-index:20001;user-select:none;">&times;</span>

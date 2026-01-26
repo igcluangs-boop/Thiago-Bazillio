@@ -126,40 +126,7 @@ revealElements.forEach(element => {
   revealObserver.observe(element);
 });
 
-// ===== FORMULÁRIO DE CONTATO =====
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const nome = formData.get('nome');
-    const email = formData.get('email');
-    const whatsapp = formData.get('whatsapp');
-    const mensagem = formData.get('mensagem');
-    
-    // Criar mensagem para WhatsApp
-    const whatsappMessage = `Olá! Meu nome é ${nome}.%0A%0AEmail: ${email}%0AWhatsApp: ${whatsapp}%0A%0AMensagem:%0A${mensagem}`;
-    const whatsappURL = `https://wa.me/5511979891379?text=${whatsappMessage}`;
-    
-    // Abrir WhatsApp
-    window.open(whatsappURL, '_blank');
-    
-    // Limpar formulário
-    contactForm.reset();
-    
-    // Feedback visual
-    const submitButton = contactForm.querySelector('.submit-button');
-    const originalText = submitButton.textContent;
-    submitButton.textContent = 'ENVIADO COM SUCESSO!';
-    submitButton.style.background = '#25d366';
-    
-    setTimeout(() => {
-      submitButton.textContent = originalText;
-      submitButton.style.background = '';
-    }, 3000);
-  });
-}
+// (Formspree: handler agora está no HTML)
 
 // ===== EFEITO DE PARALLAX SUAVE NO SCROLL =====
 window.addEventListener('scroll', () => {
