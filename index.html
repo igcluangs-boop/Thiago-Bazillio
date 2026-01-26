@@ -4,321 +4,280 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Thiago Bazillio</title>
+    <title>Thiago Bazillio - Personal Trainer | Treinamento Feminino</title>
     <link rel="stylesheet" href="css/style.css">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Raleway:wght@300&display=swap"
-    rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Raleway:wght@300&display=swap" rel="stylesheet"/>
 </head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <h2>Thiago Bazillio</h2>
+            <p>Carregando...</p>
+        </div>
+    </div>
 
-
-<!-- MENU DE OPÇÕES E LOGO -->
-<body class="scroll">
+    <!-- HEADER -->
     <header class="header">
         <nav class="navigation">
-          <a href="index.html" class="logo">
-            <img src="img/2.0.png" width="90" alt="Logo Thiago Bazillio">
-          </a>
+            <a href="#inicio" class="logo">
+                <img src="img/2.0.png" width="70" alt="Thiago Bazillio Personal">
+            </a>
             <input id="menubar" type="checkbox">
             <label for="menubar" class="menu-toggle">
-              <span class="menubar"></span>
-              <span class="menubar"></span>
-              <span class="menubar"></span>
+                <span class="menubar"></span>
+                <span class="menubar"></span>
+                <span class="menubar"></span>
             </label>
             <ul class="menu">
-                <li class="nav-item"><a href="index.html" class="nav-link"><ion-icon name="home-outline"></ion-icon>Home</a></li>
-                <li class="nav-item"><a href="html/contact.html" class="nav-link"><ion-icon name="call-outline"></ion-icon>Contato</a></li>
+                <li class="nav-item"><a href="#inicio">Início</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre Mim</a></li>
+                <li class="nav-item"><a href="#como-funciona">Como Funciona</a></li>
+                <li class="nav-item"><a href="#planos">Planos</a></li>
+                <li class="nav-item"><a href="#resultados">Resultados</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-
-    <div class="wrapper">
-        <main>
-
-
-      <!--SECTION 1 - HERO-->
-    <section class="module parallax parallax-1" aria-label="Seção principal de apresentação">        <img src="img/Perfil.png" alt="Perfil Thiago Bazillio" class="profile-image">        <h2>Thiago Bazillio</h2>
-        <h4>Especialista em hipertrofia feminina</h4>
+    <!-- SECTION 1 - HERO -->
+    <section class="hero-section-thiago" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-thiago">
+            <h1 class="brand-name">THIAGO BAZILLIO</h1>
+            <div class="brand-subtitle">PERSONAL TRAINER</div>
+            <a href="#planos" class="cta-button-hero">COMEÇAR AGORA</a>
+        </div>
     </section>
-    <!--FINAL SECTION 1-->
 
-
-      <!--SECTION 2 - MOTIVAÇÃO-->
-      <section class="module parallax parallax-2" aria-label="Citação motivacional">
-        <blockquote>
-          <h3>Transforme seu corpo, sua energia e sua vida.</h3>
-          <section class="destaque-produto">
-            <h2 class="destaque-titulo">PROTOCOLO DE HIPERTROFIA FEMININA 1</h2>
-            <div class="destaque-preco">R$ 49,90</div>
-            <div class="destaque-btn-wrap">
-              <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
+    <!-- SECTION 2 - SOBRE MIM -->
+    <section class="about-section" id="sobre">
+        <div class="container">
+            <h2 class="section-title">SOBRE MIM</h2>
+            <div class="about-content">
+                <p>Olá, sou o <strong>Thiago Bazillio</strong>, personal trainer há mais de 10 anos com especialização em <strong>treinamento feminino e estética corporal</strong>. Minha missão é ajudar mulheres a conquistarem o corpo dos sonhos com treinos inteligentes e resultados comprovados.</p>
+                <p>Meu trabalho é focado em <strong>hipertrofia glútea, definição muscular, emagrecimento e autoestima</strong>. Cada protocolo de treino é pensado especialmente para você, respeitando suas características e objetivos individuais.</p>
             </div>
-          </section>
-        </blockquote>
-      </section>
-      <!--FINAL SECTION 2-->
-
-      <!--SECTION COMO FUNCIONA-->
-      <section class="como-funciona" aria-label="Como funciona a consultoria">
-        <h2 class="como-title">COMO <span style='color:#00ffd0;'>FUNCIONA</span></h2>
-        <div class="como-sub">Chega de treinos sem resultado!</div>
-        <div id="headline-mobile" class="headline-mobile"></div>
-        <h1 class="como-headline">VENHA FAZER PARTE DESSE TIME DE RESULTADOS!</h1>
-        <p class="como-desc">
-          Consultoria 100% online, com acesso ao app exclusivo, vídeos dos exercícios e espaço para anotar suas cargas.<br>
-          <span style="color:#00ffd0; font-weight:600;">Fácil, prático e motivador!</span>
-        </p>
-        <p class="como-protocolo">
-          Protocolo focado em <b>glúteos e coxas</b>, sem esquecer dos superiores. Divisão inteligente: A/B/C/D/E.<br>Resultados reais, autoestima renovada!
-        </p>
-        <div class="como-btn-wrap">
-          <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
         </div>
-      </section>
-      <!-- JS da rotação de frases movido para script.js -->
+    </section>
 
-      <section class="conteudo1" aria-label="Seção de conhecimentos e habilidades">
-        <h2>Resultados Incríveis</h2>
-                  <h3>A solução pra você ter os resultados e o corpo que sempre sonhou, sem ficar horas treinando.</h3>
-                  <br>
-
-        <div class="skills-container">
-          <article class="skill-card" data-skill="html">
-            <img class="skill-full" src="img/html.png" alt="Quando iniciamos os treinos da Mari, o foco foi aumentar o volume muscular e reduzir o percentual de gordura. O resultado: pernas mais volumosas, cintura mais marcada e uma silhueta mais harmônica. Treino certo + dieta da @juliasousanutri = mais massa magra e menos gordura. Quer evoluir também? Chama e vamos montar seu plano!">
-          </article>
-          <article class="skill-card" data-skill="js">
-            <img class="skill-full" src="img/js.png" alt="@lauracadaval
-Evolução constante🔥">
-          </article>
-          <article class="skill-card" data-skill="css">
-            <img class="skill-full" src="img/CSS.png" alt="@gineeves">
-          </article>
+    <!-- SECTION 3 - COMO FUNCIONA -->
+    <section class="process-section" id="como-funciona">
+        <div class="container">
+            <h2 class="section-title">COMO FUNCIONA?</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h3>AVALIAÇÃO PERSONALIZADA</h3>
+                    <p>Entendo seus objetivos, limitações e estilo de vida para criar um protocolo de treino 100% personalizado.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h3>PROTOCOLO DE TREINO</h3>
+                    <p>Você recebe acesso ao app MFIT com vídeos dos exercícios, cargas, séries e repetições detalhadas.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h3>ACOMPANHAMENTO CONTÍNUO</h3>
+                    <p>Suporte direto comigo, correção de exercícios e ajustes no treino conforme sua evolução.</p>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- SEÇÃO DE VÍDEO -->
-      <section class="video-section" aria-label="Vídeo de transformação">
-        <div class="video-container">
-          <h2 class="video-title">Veja o Processo de <span style="color:#00ffd0;">Transformação</span></h2>
-          <div class="video-wrapper">
-            <video class="video-player" controls poster="img/video-thumbnail.jpg">
-              <source src="img/v1.mp4" type="video/mp4">
-              Seu navegador não suporta vídeos HTML5.
-            </video>
-          </div>
+    <!-- SECTION 4 - PLANOS -->
+    <section class="skills-section" id="planos">
+        <div class="container">
+            <h2 class="section-title">MEUS PLANOS DE TREINO</h2>
+            <div class="plans-grid">
+                <div class="plan-card featured">
+                    <div class="plan-badge">MAIS VENDIDO</div>
+                    <h3>PROTOCOLO DE HIPERTROFIA FEMININA</h3>
+                    <div class="plan-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">49</span>
+                        <span class="cents">,90</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Treino focado em GLÚTEOS e coxas</li>
+                        <li>✅ Protocolo completo A/B/C/D/E</li>
+                        <li>✅ Atenção especial aos superiores</li>
+                        <li>✅ Acesso ao app MFIT</li>
+                        <li>✅ Vídeos de todos os exercícios</li>
+                        <li>✅ Espaço para anotações de cargas</li>
+                        <li>✅ Suporte direto comigo</li>
+                    </ul>
+                    <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" class="plan-button">COMEÇAR AGORA</a>
+                </div>
+                <div class="plan-card">
+                    <h3>CONSULTORIA PERSONALIZADA</h3>
+                    <div class="plan-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">149</span>
+                        <span class="cents">,90</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Avaliação física completa</li>
+                        <li>✅ Treino 100% personalizado</li>
+                        <li>✅ Ajustes mensais no protocolo</li>
+                        <li>✅ Acompanhamento semanal</li>
+                        <li>✅ Correção de exercícios por vídeo</li>
+                        <li>✅ Suporte prioritário</li>
+                        <li>✅ Orientação nutricional básica</li>
+                    </ul>
+                    <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" class="plan-button">COMEÇAR AGORA</a>
+                </div>
+                <div class="plan-card">
+                    <h3>TREINO EM CASA</h3>
+                    <div class="plan-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">39</span>
+                        <span class="cents">,90</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Sem equipamentos necessários</li>
+                        <li>✅ Protocolo para treino domiciliar</li>
+                        <li>✅ Exercícios com peso corporal</li>
+                        <li>✅ Acesso ao app MFIT</li>
+                        <li>✅ Vídeos demonstrativos</li>
+                        <li>✅ Treinos de 30-45 minutos</li>
+                        <li>✅ Ideal para iniciantes</li>
+                    </ul>
+                    <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" class="plan-button">COMEÇAR AGORA</a>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- MODAL DE HABILIDADES -->
-      <div id="skillModal" class="skill-modal">
-        <div class="skill-modal-content">
-          <button class="modal-close" onclick="closeSkillModal()">&times;</button>
-          <div class="modal-body">
-            <img id="modalIcon" class="modal-icon" src="" alt="Ícone habilidade">
-            <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
-          </div>
+    <!-- SECTION 5 - ESTATÍSTICAS -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-plus">+</span>
+                    <p class="stat-label">Anos de Experiência</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-plus">+</span>
+                    <p class="stat-label">Alunas Transformadas</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-plus">%</span>
+                    <p class="stat-label">Resultados Comprovados</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-
-      <!--SECTION 3 - MOTIVAÇÃO FINAL-->
-      <section class="conteudo" aria-label="Seção de motivação e redes sociais">
-      <div class="motivation-box">
-        <p class="motivation-text">
-        Acredite no seu potencial, desafie seus limites e descubra a melhor versão de você mesma. <strong>O seu futuro começa agora!</strong></p>
-        
-        
-
-      <!-- SECTION FAQ -->
-      <section class="faq-section" style="max-width:900px;margin:48px auto 0 auto;">
-        <h2 class="faq-title">PERGUNTAS FREQUENTES</h2>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary class="faq-q">COMO TEREI ACESSO AOS TREINOS?</summary>
-            <div class="faq-a">Após o pagamento, em instantes você recebe o acesso ao app no seu e-mail cadastrado.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">NÃO TREINO EM ACADEMIA E NEM TENHO EQUIPAMENTOS, POSSO COMPRAR O TREINO?</summary>
-            <div class="faq-a">Não compre, esse treino é voltado para quem treina em academia.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">TODOS OS EXERCÍCIOS TEM VÍDEOS?</summary>
-            <div class="faq-a">Sim, todos os exercícios possuem vídeo demonstrativo no app.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">SÃO QUANTOS TREINOS?</summary>
-            <div class="faq-a">Você recebe um treino, com uma divisão semanal de cinco vezes</div>
-          </details>
+    <!-- SECTION 6 - RESULTADOS -->
+    <section class="portfolio-section" id="resultados">
+        <div class="container">
+            <h2 class="section-title">RESULTADOS INCRÍVEIS</h2>
+            <p class="results-intro">Veja algumas das transformações das minhas alunas. Cada resultado é fruto de dedicação, treino inteligente e acompanhamento personalizado!</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="img/Style10.jpg" alt="Transformação 1">
+                    <div class="portfolio-overlay">
+                        <h3>Hipertrofia Glútea</h3>
+                        <p>6 meses de treino</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/Style9.jpg" alt="Transformação 2">
+                    <div class="portfolio-overlay">
+                        <h3>Emagrecimento</h3>
+                        <p>4 meses de dedicação</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/Style10.jpg" alt="Transformação 3">
+                    <div class="portfolio-overlay">
+                        <h3>Definição Muscular</h3>
+                        <p>8 semanas intensas</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/Style9.jpg" alt="Transformação 4">
+                    <div class="portfolio-overlay">
+                        <h3>Ganho de Massa</h3>
+                        <p>5 meses de evolução</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/Style10.jpg" alt="Transformação 5">
+                    <div class="portfolio-overlay">
+                        <h3>Pós-parto</h3>
+                        <p>Recuperação em 3 meses</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/Style9.jpg" alt="Transformação 6">
+                    <div class="portfolio-overlay">
+                        <h3>Shape Fitness</h3>
+                        <p>Transformação completa</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="faq-btn-wrap">
-          <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
-        </div>
-      </section>
+    </section>
 
-      <!-- SECTION SOBRE THIAGO -->
-      <section class="sobre-thiago" style="max-width:1100px;margin:56px auto 0 auto;">
-        <div class="sobre-thiago-box">
-          <img src="img/Perfil.png" alt="Thiago Bazillio" class="sobre-thiago-img">
-          <div>
-            <h2 class="sobre-thiago-nome">Thiago Bazillio</h2>
-            <p class="sobre-thiago-desc">Há mais de dez anos atuando na área fitness com foco em estética feminina. Resultados comprovados, emagrecimento, hipertrofia, definição muscular e AUTO ESTIMA renovada!</p>
-          </div>
-        </div>
-      </section>
-      </div>
-      <div class="social-links">
-          <a href="https://www.instagram.com/thiagobazillio/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" title="Siga-me no Instagram" aria-label="Instagram">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-          <a href="html/e-mail.html" class="social-btn gmail" title="Envie um email" aria-label="Gmail">
-            <ion-icon name="mail"></ion-icon>
-          </a>
-          <a href="https://api.whatsapp.com/send/?phone=5511979891379&text=Ol%C3%A1+eu+tenho+interesse+em+suas+aulas+presenciais%21&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="Envie uma mensagem no WhatsApp" aria-label="WhatsApp">
-            <ion-icon name="logo-whatsapp"></ion-icon>
-          </a>
-        </div>
-      </section>
-      <!--FINAL SECTION 3-->
-      
-      
+    <!-- SECTION 7 - CONTATO -->
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <h2 class="section-title">FALE COMIGO</h2>
+            <p class="contact-intro">Pronta para transformar seu corpo? Preencha o formulário abaixo e vamos conversar sobre seus objetivos!</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="whatsapp" placeholder="Seu WhatsApp" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="mensagem" placeholder="Conte-me sobre seus objetivos e qual plano tem interesse..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">QUERO COMEÇAR AGORA</button>
+            </form>
 
-        </main>
-        
-    </div>
+            <div class="social-links-contact">
+                <a href="https://wa.me/5511979891379" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/thiagobazillio/" target="_blank" class="social-link instagram" title="Instagram">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    
-    <footer id="rodape">
-        <img class="perfil" src="img/2.0.png" width="80" alt="Logo Thiago Bazillio rodapé">
-        <div class="footer-divider"></div>
-        <p>&copy; 2026 Luan Gs - Todos os direitos reservados</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <img src="img/2.0.png" width="50" alt="Thiago Bazillio" class="footer-logo">
+        <p>&copy; 2024 Thiago Bazillio - Personal Trainer | Todos os direitos reservados</p>
+        <p style="font-size: 0.85rem; margin-top: 10px; color: var(--gray);">prof_thiagobazilio@hotmail.com</p>
     </footer>
-    <!-- FINAL DO RODA-PÉ -->
-    <!-- MODAL DE IMAGEM AMPLIADA -->
-    <div id="imageModal" class="image-modal">
-      <span class="image-modal-close" id="imageModalClose">&times;</span>
-      <div class="image-modal-inner">
-        <img class="image-modal-content" id="imageModalImg" alt="Imagem ampliada">
-        <div class="image-modal-caption" id="imageModalCaption"></div>
-      </div>
-    </div>
-     
 
-    <script 
-    src="https://code.jquery.com/jquery-3.6.3.min.js" 
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
-    crossorigin="anonymous"
-    ></script>
-    <script src="js/script.js"></script>
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5511979891379?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20treinos." 
+       target="_blank" 
+       class="whatsapp-float" 
+       title="Fale comigo no WhatsApp"
+       aria-label="WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
 
-    <script>
-      // Modal de imagem ampliada com legenda
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.skill-card img').forEach(function(img) {
-          img.style.cursor = 'zoom-in';
-          img.addEventListener('click', function(e) {
-            e.stopPropagation();
-            var modal = document.getElementById('imageModal');
-            var modalImg = document.getElementById('imageModalImg');
-            var modalCaption = document.getElementById('imageModalCaption');
-            modal.style.display = 'flex';
-            modalImg.src = this.src;
-            modalImg.alt = this.alt;
-            // Usa o alt da imagem como legenda
-            modalCaption.textContent = this.alt;
-            document.body.style.overflow = 'hidden';
-          });
-        });
-        document.getElementById('imageModalClose').onclick = function() {
-          document.getElementById('imageModal').style.display = 'none';
-          document.body.style.overflow = 'auto';
-        };
-        document.getElementById('imageModal').onclick = function(e) {
-          if (e.target === this) {
-            this.style.display = 'none';
-            document.body.style.overflow = 'auto';
-          }
-        };
-        document.addEventListener('keydown', function(event) {
-          if (event.key === 'Escape') {
-            document.getElementById('imageModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-          }
-        });
-      });
-    </script>
-
-    <script>
-      // Dados das habilidades com descrições completas
-      const skillsData = {
-        html: {
-          title: '@juliasousanutri',
-          icon: 'img/html.png',
-          description: 'Quando iniciamos os treinos da Mari, o foco foi aumentar o volume muscular e reduzir o percentual de gordura. O resultado: pernas mais volumosas, cintura mais marcada e uma silhueta mais harmônica. Treino certo + dieta da @juliasousanutri = mais massa magra e menos gordura. Quer evoluir também? Chama e vamos montar seu plano!'
-        },
-        js: {
-          title: '@lauracadaval',
-          icon: 'img/js.png',
-          description: ' Evolução constante🔥'
-        },
-        css: {
-          title: '@gineeves',
-          icon: 'img/CSS.png',
-          description: ''
-        }
-      };
-
-      // Função para abrir o modal
-      function openSkillModal(skillKey) {
-        const skill = skillsData[skillKey];
-        if (!skill) return;
-
-        document.getElementById('modalTitle').textContent = skill.title;
-        document.getElementById('modalIcon').src = skill.icon;
-        document.getElementById('modalDescription').textContent = skill.description;
-        document.getElementById('skillModal').classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      // Função para fechar o modal
-      function closeSkillModal() {
-        document.getElementById('skillModal').classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-
-      // Inicializar event listeners quando o DOM estiver pronto
-      document.addEventListener('DOMContentLoaded', function() {
-        // Event listeners para os cards
-        document.querySelectorAll('.skill-card').forEach(card => {
-          card.addEventListener('click', function() {
-            const skillKey = this.dataset.skill;
-            console.log('Card clicado:', skillKey);
-            openSkillModal(skillKey);
-          });
-          // Adicionar cursor pointer para indicar que é clicável
-          card.style.cursor = 'pointer';
-        });
-
-        // Fechar modal ao clicar fora
-        document.getElementById('skillModal').addEventListener('click', function(event) {
-          if (event.target === this) {
-            closeSkillModal();
-          }
-        });
-
-        // Fechar modal com tecla ESC
-        document.addEventListener('keydown', function(event) {
-          if (event.key === 'Escape') {
-            closeSkillModal();
-          }
-        });
-      });
-    </script>
-
+    <script src="js/script-index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
