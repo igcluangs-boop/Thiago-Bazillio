@@ -93,7 +93,7 @@
         <div class="container">
             <h2 class="section-title">MEUS PLANOS DE TREINO</h2>
             <div class="plans-grid">
-                <div class="plan-card featured">
+                <div class="plan-card featured destaque-mais-vendido">
                     <div class="plan-badge">MAIS VENDIDO</div>
                     <h3>PROTOCOLO DE HIPERTROFIA FEMININA</h3>
                     <div class="plan-price">
@@ -189,7 +189,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="img/Style9.jpg" alt="Transformação 2">
+                    <img src="img/Style11.jpg" alt="Transformação 2">
                     <div class="portfolio-overlay">
                         <h3>Emagrecimento</h3>
                         <p>4 meses de dedicação</p>
@@ -277,6 +277,12 @@
     </a>
 
     <script src="js/script-index.js"></script>
+        <!-- MODAL DE IMAGEM EM TELA CHEIA -->
+        <div id="modal-imagem" style="display:none;position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:rgba(10,10,10,0.97);align-items:center;justify-content:center;transition:opacity 0.3s;pointer-events:auto;">
+            <span id="fechar-modal-imagem" style="position:absolute;top:30px;right:40px;font-size:3rem;color:#00ffd0;cursor:pointer;font-family:sans-serif;z-index:20001;user-select:none;">&times;</span>
+            <img id="imagem-modal-grande" src="" alt="Imagem expandida" style="max-width:90vw;max-height:85vh;border-radius:18px;box-shadow:0 0 40px #00ffd088,0 0 80px #000b;object-fit:contain;">
+        </div>
+        <!-- O script do modal foi movido para js/script-index.js para garantir carregamento correto. -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

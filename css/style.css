@@ -1,3 +1,72 @@
+.plan-card.featured {
+  border-color: var(--primary);
+  background: rgba(0, 247, 255, 0.08);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px 0 #00ffd088, 0 0 80px 0 #00ffd044, 0 0 0 8px #00ffd022;
+  animation: destaque-pulse 2s infinite alternate, destaque-glow 3s infinite alternate;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes destaque-pulse {
+  0% {
+    box-shadow: 0 0 40px 0 #00ffd088, 0 0 80px 0 #00ffd044, 0 0 0 8px #00ffd022;
+    filter: brightness(1.08);
+  }
+  100% {
+    box-shadow: 0 0 80px 10px #00ffd0cc, 0 0 120px 20px #00ffd044, 0 0 0 18px #00ffd011;
+    filter: brightness(1.18) drop-shadow(0 0 18px #00ffd0);
+  }
+}
+
+@keyframes destaque-glow {
+  0% {
+    border-color: var(--primary);
+  }
+  100% {
+    border-color: #ff2e6e;
+  }
+}
+/* ===== MODAL DE IMAGEM EM TELA CHEIA ===== */
+#modal-imagem {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10,10,10,0.97);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  pointer-events: auto;
+}
+#modal-imagem[style*="display: flex"] {
+  display: flex !important;
+}
+#modal-imagem img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 18px;
+  box-shadow: 0 0 40px #00ffd088,0 0 80px #000b;
+  object-fit: contain;
+}
+#fechar-modal-imagem {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: #00ffd0;
+  cursor: pointer;
+  font-family: sans-serif;
+  z-index: 20001;
+  user-select: none;
+  transition: color 0.2s;
+}
+#fechar-modal-imagem:hover {
+  color: #ff2e6e;
+}
 /* ===== VARIÁVEIS E RESET ===== */
 :root {
   --primary: #00f7ff;

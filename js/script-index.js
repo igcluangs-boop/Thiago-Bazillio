@@ -1,3 +1,43 @@
+// ===== MODAL DE IMAGEM EM TELA CHEIA PARA RESULTADOS =====
+window.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('modal-imagem');
+  const imgModal = document.getElementById('imagem-modal-grande');
+  const fechar = document.getElementById('fechar-modal-imagem');
+  if (!modal || !imgModal || !fechar) return;
+  document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.style.cursor = 'zoom-in';
+    item.addEventListener('click', function(e) {
+      // Garante que não abre ao clicar no overlay de texto
+      const img = this.querySelector('img');
+      if (!img) return;
+      imgModal.src = img.src;
+      imgModal.alt = img.alt;
+      modal.style.display = 'flex';
+      modal.style.opacity = '0';
+      setTimeout(()=>{modal.style.opacity='1';},10);
+    });
+  });
+  function fecharModal() {
+    modal.style.opacity = '0';
+    setTimeout(()=>{
+      modal.style.display='none';
+      imgModal.src = '';
+    },300);
+  }
+  fechar.addEventListener('click', fecharModal);
+  // Fechar ao clicar fora da imagem
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      fecharModal();
+    }
+  });
+  // Fechar com ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+      fecharModal();
+    }
+  });
+});
 // ===== PRELOADER =====
 window.addEventListener('load', function() {
   const loader = document.getElementById('preloader');
