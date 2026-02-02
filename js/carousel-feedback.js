@@ -5,6 +5,29 @@ const feedbackImages = [
   'img/F_11.PNG', 'img/F_12.PNG', 'img/F_13.PNG', 'img/F_14.PNG'
 ];
 
+function updateDots() {
+  const dotsContainer = document.getElementById('carousel-feedback-dots');
+  if (!dotsContainer) return;
+  dotsContainer.innerHTML = '';
+  feedbackImages.forEach((_, idx) => {
+    const dot = document.createElement('span');
+    dot.style.width = '11px';
+    dot.style.height = '11px';
+    dot.style.borderRadius = '50%';
+    dot.style.display = 'inline-block';
+    dot.style.background = idx === currentIndex ? '#d13b7b' : '#e0e0e0';
+    dot.style.cursor = 'pointer';
+    dot.style.transition = 'background 0.2s';
+    dot.addEventListener('click', () => {
+      currentIndex = idx;
+      showFeedback(currentIndex);
+      updateDots();
+      startAutoCarousel();
+    });
+    dotsContainer.appendChild(dot);
+  });
+}
+
 let autoInterval = null;
 
 let currentIndex = 0;
@@ -13,6 +36,7 @@ function showFeedback(index) {
   const img = document.getElementById('carousel-feedback-img');
   img.src = feedbackImages[index];
   img.alt = `Feedback real ${index + 1}`;
+  updateDots();
 }
 
 function nextFeedback() {
@@ -41,6 +65,30 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoCarousel();
   });
   startAutoCarousel();
+
+  // Swipe para mobile
+  const imgContainer = document.getElementById('carousel-feedback-img-container');
+  let startX = null;
+  imgContainer.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 1) {
+      startX = e.touches[0].clientX;
+    }
+  });
+  imgContainer.addEventListener('touchend', function(e) {
+    if (startX !== null && e.changedTouches.length === 1) {
+      const endX = e.changedTouches[0].clientX;
+      const deltaX = endX - startX;
+      if (Math.abs(deltaX) > 40) {
+        if (deltaX < 0) {
+          nextFeedback();
+        } else {
+          prevFeedback();
+        }
+        startAutoCarousel();
+      }
+      startX = null;
+    }
+  });
 
   // Expansão da imagem em modal
   const feedbackImg = document.getElementById('carousel-feedback-img');

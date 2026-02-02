@@ -286,12 +286,15 @@
         <div class="container">
             <h2 class="section-title">Feedbacks de Alunas</h2>
             <p class="results-intro">Veja os feedbacks reais das alunas sobre o acompanhamento!</p>
-            <div class="carousel-feedback" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; margin-top: 32px;">
-                <button id="carousel-feedback-prev" aria-label="Anterior" style="background: none; border: none; font-size: 2em; color: #d13b7b; cursor: pointer;">&#10094;</button>
-                <div style="max-width: 340px; min-height: 220px; display: flex; align-items: center; justify-content: center;">
+            <div class="carousel-feedback" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; margin-top: 32px; position: relative;">
+                <button id="carousel-feedback-prev" aria-label="Anterior" style="background: none; border: none; font-size: 1.5em; color: #d13b7b99; cursor: pointer; position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 2; opacity: 0.5;">&#10094;</button>
+                <div id="carousel-feedback-img-container" style="max-width: 340px; min-height: 220px; display: flex; align-items: center; justify-content: center; touch-action: pan-x;">
                     <img id="carousel-feedback-img" src="img/F_1.PNG" alt="Feedback real" style="width: 100%; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.10); cursor: pointer;" />
                 </div>
-                <button id="carousel-feedback-next" aria-label="Próximo" style="background: none; border: none; font-size: 2em; color: #d13b7b; cursor: pointer;">&#10095;</button>
+                <button id="carousel-feedback-next" aria-label="Próximo" style="background: none; border: none; font-size: 1.5em; color: #d13b7b99; cursor: pointer; position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 2; opacity: 0.5;">&#10095;</button>
+                <div id="carousel-feedback-dots" style="display: flex; justify-content: center; gap: 8px; margin-top: 18px;">
+                    <!-- Bolinhas do carrossel serão inseridas via JS -->
+                </div>
             </div>
             <!-- Modal para expandir imagem -->
             <div id="feedback-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;">
