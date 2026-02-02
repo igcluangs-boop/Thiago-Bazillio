@@ -1,3 +1,62 @@
+/* ===== NOVA SEÇÃO DIFERENCIAIS ===== */
+.diferenciais-section {
+  background: #fff;
+  padding: 90px 0 90px 0;
+  width: 100%;
+}
+.diferenciais-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.diferenciais-box {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 0 60px 0 #f9266b22, 0 0 0 4px #ff4f8a11;
+  padding: 48px 38px 38px 38px;
+  max-width: 420px;
+  color: #181818;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.13rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: box-shadow 0.3s;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+.diferenciais-title {
+  color: var(--primary);
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+.diferenciais-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.diferenciais-list li {
+  font-size: 1.13rem;
+  color: #181818;
+  margin-bottom: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.diferenciais-list li:last-child {
+  margin-bottom: 0;
+}
+.diferenciais-obs {
+  color: var(--gray);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 4px;
+}
 /* Centralizar a caixa de diferenciais */
 .process-diferenciais {
   display: flex;
