@@ -1,3 +1,46 @@
+/* ===== PARA QUEM É ===== */
+.forwho-section {
+  padding: 80px 2rem 60px;
+  background: var(--darker);
+}
+.forwho-list {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.15rem;
+  color: var(--light);
+  list-style: none;
+  padding: 0;
+}
+.forwho-list li {
+  margin-bottom: 0.7rem;
+  padding-left: 0.5rem;
+  font-weight: 400;
+}
+.forwho-diferenciais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.forwho-bad, .forwho-good {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  min-width: 220px;
+  box-shadow: 0 2px 18px #0002;
+  font-size: 1.08rem;
+}
+.forwho-bad p {
+  color: #ff4f8a;
+  margin: 0 0 0.7rem 0;
+  font-weight: 600;
+}
+.forwho-good p {
+  color: #2ee59d;
+  margin: 0 0 0.7rem 0;
+  font-weight: 600;
+}
 /* ===== ANIMAÇÃO DO BOTÃO HAMBÚRGUER ===== */
 .menu-toggle.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
@@ -513,7 +556,17 @@ body {
 /* ===== ABOUT SECTION ===== */
 .about-section {
   padding: 100px 2rem;
-  background: var(--darker);
+  background: #fff;
+  box-shadow: 0 2px 24px #0001;
+}
+.about-section .section-title,
+.about-section .about-content,
+.about-section .about-content p {
+  color: #222 !important;
+}
+.about-section .about-content strong {
+  color: var(--primary);
+}
 }
 
 .about-content {

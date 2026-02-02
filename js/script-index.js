@@ -21,20 +21,40 @@ window.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('modal-imagem');
   const imgModal = document.getElementById('imagem-modal-grande');
   const fechar = document.getElementById('fechar-modal-imagem');
-  if (!modal || !imgModal || !fechar) return;
-  document.querySelectorAll('.portfolio-item').forEach(item => {
+  const setaEsquerda = document.getElementById('seta-esquerda-modal');
+  const setaDireita = document.getElementById('seta-direita-modal');
+  if (!modal || !imgModal || !fechar || !setaEsquerda || !setaDireita) return;
+
+  // Coletar todas as imagens do grid
+  const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+  const imagensPortfolio = portfolioItems.map(item => {
+    const img = item.querySelector('img');
+    return img ? {src: img.src, alt: img.alt} : null;
+  }).filter(Boolean);
+  let imagemAtual = 0;
+
+  function mostrarImagemModal(idx) {
+    if (idx < 0) idx = imagensPortfolio.length - 1;
+    if (idx >= imagensPortfolio.length) idx = 0;
+    imagemAtual = idx;
+    imgModal.src = imagensPortfolio[imagemAtual].src;
+    imgModal.alt = imagensPortfolio[imagemAtual].alt;
+  }
+
+  portfolioItems.forEach((item, idx) => {
     item.style.cursor = 'zoom-in';
     item.addEventListener('click', function(e) {
       // Garante que não abre ao clicar no overlay de texto
       const img = this.querySelector('img');
       if (!img) return;
-      imgModal.src = img.src;
-      imgModal.alt = img.alt;
+      imagemAtual = idx;
+      mostrarImagemModal(imagemAtual);
       modal.style.display = 'flex';
       modal.style.opacity = '0';
       setTimeout(()=>{modal.style.opacity='1';},10);
     });
   });
+
   function fecharModal() {
     modal.style.opacity = '0';
     setTimeout(()=>{
@@ -54,6 +74,23 @@ window.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape' && modal.style.display === 'flex') {
       fecharModal();
     }
+    // Navegação por teclado
+    if (modal.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') {
+        mostrarImagemModal(imagemAtual - 1);
+      } else if (e.key === 'ArrowRight') {
+        mostrarImagemModal(imagemAtual + 1);
+      }
+    }
+  });
+  // Setas do modal
+  setaEsquerda.addEventListener('click', function(e) {
+    e.stopPropagation();
+    mostrarImagemModal(imagemAtual - 1);
+  });
+  setaDireita.addEventListener('click', function(e) {
+    e.stopPropagation();
+    mostrarImagemModal(imagemAtual + 1);
   });
 });
 // ===== PRELOADER =====
