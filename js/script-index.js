@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       btn.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-3px)';
-        this.style.boxShadow = '0 10px 30px rgba(0,247,255,0.5)';
+        this.style.boxShadow = '0 10px 30px rgba(255, 255, 255, 0.5)';
       });
       
       btn.addEventListener('mouseleave', function() {
@@ -283,12 +283,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Efeito hover no cadeado
     cadeado.addEventListener('mouseenter', function() {
       this.style.transform = 'scale(1.1) rotate(5deg)';
-      this.style.boxShadow = '0 6px 30px rgba(0,247,255,0.5)';
+      this.style.boxShadow = '0 6px 30px rgba(255, 255, 255, 0.5)';
     });
     
     cadeado.addEventListener('mouseleave', function() {
       this.style.transform = 'scale(1) rotate(0)';
-      this.style.boxShadow = '0 4px 24px rgba(0,247,255,0.3)';
+      this.style.boxShadow = '0 4px 24px rgba(255, 255, 255, 0.3)';
     });
   }
 });
@@ -359,5 +359,5 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-console.log('%c🚀 Site desenvolvido por Luan Gs', 'color: #00f7ff; font-size: 20px; font-weight: bold;');
+console.log('%c🚀 Site desenvolvido por Luan Gs', 'color: #ffffff; font-size: 20px; font-weight: bold;');
 console.log('%c💡 Quer um site assim? Entre em contato!', 'color: #a0a0a0; font-size: 14px;');

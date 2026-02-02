@@ -69,11 +69,11 @@ function createParticles() {
     const colorChoice = Math.random();
     let gradient;
     if (colorChoice < 0.33) {
-      gradient = 'radial-gradient(circle, #00ffd0, rgba(0, 255, 208, 0))';
+      gradient = 'radial-gradient(circle, #ffffff, rgba(0, 255, 208, 0))';
     } else if (colorChoice < 0.66) {
       gradient = 'radial-gradient(circle, #ff2e6e, rgba(255, 46, 110, 0))';
     } else {
-      gradient = 'radial-gradient(circle, rgba(0, 255, 208, 0.8), rgba(255, 46, 110, 0.2))';
+      gradient = 'radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 46, 110, 0.2))';
     }
     
     Object.assign(particle.style, {
@@ -210,7 +210,7 @@ window.addEventListener('load', function() {
   const ctaBtn = document.querySelector('.btn-cta');
   if (ctaBtn) {
     setInterval(() => {
-      ctaBtn.style.boxShadow = '0 0 24px 6px #00ffd088';
+      ctaBtn.style.boxShadow = '0 0 24px 6px #ffffff88';
       setTimeout(() => ctaBtn.style.boxShadow = '0 2px 12px #0005', 600);
     }, 2000);
   }
@@ -227,15 +227,15 @@ scrollToTopBtn.style.cssText = `
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0, 247, 255, 0.9), rgba(0, 247, 255, 0.7));
-  border: 2px solid #00f7ff;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border: 2px solid #ffffff;
   color: #000;
   font-size: 24px;
   cursor: pointer;
   display: none;
   z-index: 999;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0, 247, 255, 0.4);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.4);
   align-items: center;
   justify-content: center;
 `;
