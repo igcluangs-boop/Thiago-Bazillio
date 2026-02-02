@@ -60,6 +60,40 @@ function startAutoCarousel() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Swipe na grade de resultados incríveis
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+    let gridStartX = null;
+    let gridCurrentIndex = 0;
+    const gridImgs = document.querySelectorAll('.result-img');
+    function showGridImg(idx) {
+      gridImgs.forEach((img, i) => {
+        img.style.display = i === idx ? 'block' : 'none';
+      });
+    }
+    if (portfolioGrid && gridImgs.length > 0) {
+      showGridImg(gridCurrentIndex);
+      portfolioGrid.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          gridStartX = e.touches[0].clientX;
+        }
+      });
+      portfolioGrid.addEventListener('touchend', function(e) {
+        if (gridStartX !== null && e.changedTouches.length === 1) {
+          const gridEndX = e.changedTouches[0].clientX;
+          const gridDeltaX = gridEndX - gridStartX;
+          if (Math.abs(gridDeltaX) > 40) {
+            if (gridDeltaX < 0) {
+              gridCurrentIndex = (gridCurrentIndex + 1) % gridImgs.length;
+            } else {
+              gridCurrentIndex = (gridCurrentIndex - 1 + gridImgs.length) % gridImgs.length;
+            }
+            showGridImg(gridCurrentIndex);
+          }
+          gridStartX = null;
+        }
+      });
+    }
   showFeedback(currentIndex);
   document.getElementById('carousel-feedback-next').addEventListener('click', function() {
     nextFeedback();
