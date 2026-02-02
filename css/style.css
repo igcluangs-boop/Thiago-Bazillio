@@ -1,3 +1,56 @@
+/* ===== DIFERENCIAIS DA CONSULTORIA ===== */
+.process-diferenciais {
+  margin-top: 2.5rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 18px #0002;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-diferenciais-title {
+  font-size: 1.45rem;
+  color: var(--primary);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+.diferenciais-icon {
+  font-size: 1.3em;
+  vertical-align: middle;
+  color: var(--primary);
+  margin-right: 6px;
+}
+.diferenciais-txt {
+  color: var(--primary);
+}
+.process-diferenciais-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.process-diferenciais-list li {
+  font-size: 1.13rem;
+  color: var(--light);
+  margin-bottom: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.process-diferenciais-list li:last-child {
+  margin-bottom: 0;
+}
+.diferenciais-obs {
+  color: var(--gray);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 4px;
+}
 /* ===== FEEDBACKS DE ALUNAS ===== */
 .feedback-section {
   padding: 80px 2rem 60px;
