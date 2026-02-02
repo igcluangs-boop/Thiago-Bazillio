@@ -7,6 +7,7 @@
     <title>Thiago Bazillio - Personal Trainer | Treinamento Feminino</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Raleway:wght@300&display=swap" rel="stylesheet"/>
+    <script src="js/carousel-feedback.js" defer></script>
 </head>
 <body>
     <!-- PRELOADER -->
@@ -285,21 +286,17 @@
         <div class="container">
             <h2 class="section-title">Feedbacks de Alunas</h2>
             <p class="results-intro">Veja os feedbacks reais das alunas sobre o acompanhamento!</p>
-            <div class="portfolio-grid">
-                <div class="portfolio-item"><img src="img/F_1.PNG" alt="Feedback real 1"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_2.PNG" alt="Feedback real 2"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_3.jpeg" alt="Feedback real 3"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_4.PNG" alt="Feedback real 4"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_5.PNG" alt="Feedback real 5"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_6.PNG" alt="Feedback real 6"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_7.PNG" alt="Feedback real 7"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_8.PNG" alt="Feedback real 8"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_9.PNG" alt="Feedback real 9"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_10.jpeg" alt="Feedback real 10"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_11.PNG" alt="Feedback real 11"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_12.PNG" alt="Feedback real 12"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_13.PNG" alt="Feedback real 13"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
-                <div class="portfolio-item"><img src="img/F_14.PNG" alt="Feedback real 14"><div class="portfolio-overlay"><h3>Feedback</h3></div></div>
+            <div class="carousel-feedback" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; margin-top: 32px;">
+                <button id="carousel-feedback-prev" aria-label="Anterior" style="background: none; border: none; font-size: 2em; color: #d13b7b; cursor: pointer;">&#10094;</button>
+                <div style="max-width: 340px; min-height: 220px; display: flex; align-items: center; justify-content: center;">
+                    <img id="carousel-feedback-img" src="img/F_1.PNG" alt="Feedback real" style="width: 100%; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.10); cursor: pointer;" />
+                </div>
+                <button id="carousel-feedback-next" aria-label="Próximo" style="background: none; border: none; font-size: 2em; color: #d13b7b; cursor: pointer;">&#10095;</button>
+            </div>
+            <!-- Modal para expandir imagem -->
+            <div id="feedback-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;">
+                <span id="feedback-modal-close" style="position:absolute; top:32px; right:48px; font-size:2.5em; color:#fff; cursor:pointer; font-weight:bold;">&times;</span>
+                <img id="feedback-modal-img" src="" alt="Feedback expandido" style="max-width:90vw; max-height:80vh; border-radius:18px; box-shadow:0 4px 32px rgba(209,59,123,0.18);">
             </div>
         </div>
     </section>
