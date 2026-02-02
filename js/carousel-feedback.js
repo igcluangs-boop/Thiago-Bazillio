@@ -151,10 +151,18 @@ document.addEventListener('DOMContentLoaded', function() {
     'img/IMG_11.jpeg','img/IMG_12.jpeg','img/IMG_13.jpeg','img/IMG_14.jpeg','img/IMG_15.jpeg'
   ];
 
+  function showResultModalImg(idx) {
+    resultModalImg.style.opacity = '0';
+    setTimeout(() => {
+      resultModalImg.src = resultImagesArr[idx];
+      resultModalImg.style.transition = 'opacity 0.5s';
+      resultModalImg.style.opacity = '1';
+    }, 200);
+  }
   resultImgs.forEach((img, idx) => {
     img.addEventListener('click', function() {
       resultCurrentIndex = idx;
-      resultModalImg.src = resultImagesArr[resultCurrentIndex];
+      showResultModalImg(resultCurrentIndex);
       resultModal.style.display = 'flex';
     });
   });
@@ -186,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Imagem anterior
           resultCurrentIndex = (resultCurrentIndex - 1 + resultImagesArr.length) % resultImagesArr.length;
         }
-        resultModalImg.src = resultImagesArr[resultCurrentIndex];
+        showResultModalImg(resultCurrentIndex);
       }
       resultModalStartX = null;
     }
