@@ -683,6 +683,7 @@ body {
 
 .logo img {
   transition: var(--transition);
+  border-radius: 5%;
 }
 
 .logo img:hover {
