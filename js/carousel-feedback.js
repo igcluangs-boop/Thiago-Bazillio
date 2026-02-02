@@ -34,9 +34,14 @@ let currentIndex = 0;
 
 function showFeedback(index) {
   const img = document.getElementById('carousel-feedback-img');
-  img.src = feedbackImages[index];
-  img.alt = `Feedback real ${index + 1}`;
-  updateDots();
+  img.style.opacity = '0';
+  setTimeout(() => {
+    img.src = feedbackImages[index];
+    img.alt = `Feedback real ${index + 1}`;
+    img.style.transition = 'opacity 0.5s';
+    img.style.opacity = '1';
+    updateDots();
+  }, 200);
 }
 
 function nextFeedback() {
@@ -106,6 +111,84 @@ document.addEventListener('DOMContentLoaded', function() {
   modal.addEventListener('click', function(e) {
     if (e.target === modal) {
       modal.style.display = 'none';
+    }
+  });
+
+  // Swipe no modal expandido
+  let modalStartX = null;
+  modalImg.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 1) {
+      modalStartX = e.touches[0].clientX;
+    }
+  });
+  modalImg.addEventListener('touchend', function(e) {
+    if (modalStartX !== null && e.changedTouches.length === 1) {
+      const modalEndX = e.changedTouches[0].clientX;
+      const modalDeltaX = modalEndX - modalStartX;
+      if (Math.abs(modalDeltaX) > 40) {
+        if (modalDeltaX < 0) {
+          // Próxima imagem
+          currentIndex = (currentIndex + 1) % feedbackImages.length;
+        } else {
+          // Imagem anterior
+          currentIndex = (currentIndex - 1 + feedbackImages.length) % feedbackImages.length;
+        }
+        modalImg.src = feedbackImages[currentIndex];
+      }
+      modalStartX = null;
+    }
+  });
+
+  // Modal para resultados incríveis
+  const resultImgs = document.querySelectorAll('.result-img');
+  const resultModal = document.getElementById('result-modal');
+  const resultModalImg = document.getElementById('result-modal-img');
+  const resultModalClose = document.getElementById('result-modal-close');
+  let resultCurrentIndex = 0;
+  const resultImagesArr = [
+    'img/IMG_1.jpeg','img/IMG_2.jpeg','img/IMG_3.jpeg','img/IMG_4.jpeg','img/IMG_5.PNG',
+    'img/IMG_6.jpeg','img/IMG_7.jpeg','img/IMG_8.jpeg','img/IMG_9.jpeg','img/IMG_10.jpeg',
+    'img/IMG_11.jpeg','img/IMG_12.jpeg','img/IMG_13.jpeg','img/IMG_14.jpeg','img/IMG_15.jpeg'
+  ];
+
+  resultImgs.forEach((img, idx) => {
+    img.addEventListener('click', function() {
+      resultCurrentIndex = idx;
+      resultModalImg.src = resultImagesArr[resultCurrentIndex];
+      resultModal.style.display = 'flex';
+    });
+  });
+  resultModalClose.addEventListener('click', function() {
+    resultModal.style.display = 'none';
+  });
+  resultModal.addEventListener('click', function(e) {
+    if (e.target === resultModal) {
+      resultModal.style.display = 'none';
+    }
+  });
+
+  // Swipe no modal dos resultados
+  let resultModalStartX = null;
+  resultModalImg.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 1) {
+      resultModalStartX = e.touches[0].clientX;
+    }
+  });
+  resultModalImg.addEventListener('touchend', function(e) {
+    if (resultModalStartX !== null && e.changedTouches.length === 1) {
+      const resultModalEndX = e.changedTouches[0].clientX;
+      const resultModalDeltaX = resultModalEndX - resultModalStartX;
+      if (Math.abs(resultModalDeltaX) > 40) {
+        if (resultModalDeltaX < 0) {
+          // Próxima imagem
+          resultCurrentIndex = (resultCurrentIndex + 1) % resultImagesArr.length;
+        } else {
+          // Imagem anterior
+          resultCurrentIndex = (resultCurrentIndex - 1 + resultImagesArr.length) % resultImagesArr.length;
+        }
+        resultModalImg.src = resultImagesArr[resultCurrentIndex];
+      }
+      resultModalStartX = null;
     }
   });
 });

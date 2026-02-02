@@ -245,21 +245,27 @@
             <p class="results-intro">Veja algumas das transformações das minhas alunas. Cada resultado é fruto de dedicação, treino inteligente e acompanhamento personalizado!</p>
             <div class="portfolio-grid">
                 <!-- Imagens de IMG_1 a IMG_15 -->
-                <div class="portfolio-item"><img src="img/IMG_1.jpeg" alt="Transformação 1"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_2.jpeg" alt="Transformação 2"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_3.jpeg" alt="Transformação 3"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_4.jpeg" alt="Transformação 4"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_5.PNG" alt="Transformação 5"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_6.jpeg" alt="Transformação 6"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_7.jpeg" alt="Transformação 7"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_8.jpeg" alt="Transformação 8"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_9.jpeg" alt="Transformação 9"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_10.jpeg" alt="Transformação 10"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_11.jpeg" alt="Transformação 11"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_12.jpeg" alt="Transformação 12"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_13.jpeg" alt="Transformação 13"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_14.jpeg" alt="Transformação 14"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
-                <div class="portfolio-item"><img src="img/IMG_15.jpeg" alt="Transformação 15"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_1.jpeg" alt="Transformação 1"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_2.jpeg" alt="Transformação 2"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_3.jpeg" alt="Transformação 3"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_4.jpeg" alt="Transformação 4"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_5.PNG" alt="Transformação 5"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_6.jpeg" alt="Transformação 6"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_7.jpeg" alt="Transformação 7"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_8.jpeg" alt="Transformação 8"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_9.jpeg" alt="Transformação 9"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_10.jpeg" alt="Transformação 10"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_11.jpeg" alt="Transformação 11"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_12.jpeg" alt="Transformação 12"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_13.jpeg" alt="Transformação 13"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_14.jpeg" alt="Transformação 14"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+                <div class="portfolio-item"><img class="result-img" src="img/IMG_15.jpeg" alt="Transformação 15"><div class="portfolio-overlay"><h3>Resultado</h3></div></div>
+            </div>
+            <!-- Modal para expandir imagem dos resultados -->
+            <div id="result-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;">
+                <span id="result-modal-close" style="position:absolute; top:32px; right:48px; font-size:2.5em; color:#fff; cursor:pointer; font-weight:bold;">&times;</span>
+                <img id="result-modal-img" src="" alt="Resultado expandido" style="max-width:90vw; max-height:80vh; border-radius:18px; box-shadow:0 4px 32px rgba(209,59,123,0.18);">
+            </div>
             </div>
         </div>
         <!-- SECTION - INFORMAÇÕES S_INFO -->
