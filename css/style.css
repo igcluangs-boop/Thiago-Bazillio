@@ -563,14 +563,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--primary), rgba(0, 247, 255, 0.5));
+  background: linear-gradient(180deg, var(--primary), rgba(255, 255, 255, 0.5));
   border-radius: 5px;
   border: 2px solid var(--dark);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
-  box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 /* ===== PRELOADER ===== */
@@ -609,7 +609,7 @@ body {
 .loader-ring:nth-child(2) {
   width: 120px;
   height: 120px;
-  border-top-color: rgba(0, 247, 255, 0.7);
+  border-top-color: rgba(255, 255, 255, 0.7);
   animation-duration: 1.5s;
   animation-direction: reverse;
 }
@@ -617,7 +617,7 @@ body {
 .loader-ring:nth-child(3) {
   width: 90px;
   height: 90px;
-  border-top-color: rgba(0, 247, 255, 0.4);
+  border-top-color: rgba(255, 255, 255, 0.4);
   animation-duration: 2s;
 }
 
