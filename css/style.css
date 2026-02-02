@@ -1,3 +1,91 @@
+/* ===== FEEDBACKS DE ALUNAS ===== */
+.feedback-section {
+  padding: 80px 2rem 60px;
+  background: var(--darker);
+}
+.feedback-section .section-title {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+.feedback-intro {
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--gray);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+.feedbacks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.2rem;
+  justify-items: center;
+}
+.feedback-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  box-shadow: 0 2px 18px #0002;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  min-height: 220px;
+  min-width: 120px;
+  height: 100%;
+  width: 100%;
+}
+.feedback-card:hover {
+  box-shadow: 0 8px 32px #ff2e6e44;
+  transform: translateY(-6px) scale(1.03);
+}
+.feedback-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feedback-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+.feedback-text {
+  text-align: center;
+  color: var(--light);
+  font-size: 1.08rem;
+  font-weight: 400;
+  margin-bottom: 1.1rem;
+}
+.feedback-name {
+  display: block;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 600px) {
+  .feedbacks-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .feedback-card {
+    min-height: 220px;
+    padding: 1.5rem 1rem;
+  }
+  .feedback-img {
+    width: 70px;
+    height: 70px;
+  }
+}
 /* ===== PARA QUEM É ===== */
 .forwho-section {
   padding: 80px 2rem 60px;

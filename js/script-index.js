@@ -25,29 +25,47 @@ window.addEventListener('DOMContentLoaded', function() {
   const setaDireita = document.getElementById('seta-direita-modal');
   if (!modal || !imgModal || !fechar || !setaEsquerda || !setaDireita) return;
 
-  // Coletar todas as imagens do grid
+
+  // Coletar todas as imagens do grid de resultados e feedbacks
   const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+  const feedbackItems = Array.from(document.querySelectorAll('.feedback-card .feedback-img'));
   const imagensPortfolio = portfolioItems.map(item => {
     const img = item.querySelector('img');
     return img ? {src: img.src, alt: img.alt} : null;
   }).filter(Boolean);
+  const imagensFeedback = feedbackItems.map(item => {
+    const img = item.querySelector('img');
+    return img ? {src: img.src, alt: img.alt} : null;
+  }).filter(Boolean);
+  const todasImagens = imagensPortfolio.concat(imagensFeedback);
   let imagemAtual = 0;
 
   function mostrarImagemModal(idx) {
-    if (idx < 0) idx = imagensPortfolio.length - 1;
-    if (idx >= imagensPortfolio.length) idx = 0;
+    if (idx < 0) idx = todasImagens.length - 1;
+    if (idx >= todasImagens.length) idx = 0;
     imagemAtual = idx;
-    imgModal.src = imagensPortfolio[imagemAtual].src;
-    imgModal.alt = imagensPortfolio[imagemAtual].alt;
+    imgModal.src = todasImagens[imagemAtual].src;
+    imgModal.alt = todasImagens[imagemAtual].alt;
   }
 
+  // Clique nas imagens dos resultados
   portfolioItems.forEach((item, idx) => {
     item.style.cursor = 'zoom-in';
     item.addEventListener('click', function(e) {
-      // Garante que não abre ao clicar no overlay de texto
       const img = this.querySelector('img');
       if (!img) return;
       imagemAtual = idx;
+      mostrarImagemModal(imagemAtual);
+      modal.style.display = 'flex';
+      modal.style.opacity = '0';
+      setTimeout(()=>{modal.style.opacity='1';},10);
+    });
+  });
+  // Clique nas imagens dos feedbacks
+  feedbackItems.forEach((item, idx) => {
+    item.style.cursor = 'zoom-in';
+    item.addEventListener('click', function(e) {
+      imagemAtual = imagensPortfolio.length + idx;
       mostrarImagemModal(imagemAtual);
       modal.style.display = 'flex';
       modal.style.opacity = '0';
