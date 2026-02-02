@@ -1,3 +1,87 @@
+/* ===== ANIMAÇÃO DO BOTÃO HAMBÚRGUER ===== */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.menu-toggle .bar {
+  transition: 0.3s;
+}
+/* ===== MENU MOBILE ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+.menu-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background: var(--primary, #00ffd0);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav-menu li a {
+  color: var(--primary, #00ffd0);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-menu li a:hover {
+  color: #ff2e6e;
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 220px;
+    background: #101820ee;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 30px 30px 30px;
+    gap: 1.5rem;
+    box-shadow: -2px 0 18px #0008;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+    z-index: 1001;
+  }
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 24px;
+    top: 18px;
+  }
+  .navigation {
+    position: relative;
+    min-height: 60px;
+  }
+}
 .plan-card.featured {
   border-color: var(--primary);
   background: rgba(0, 247, 255, 0.08);
@@ -69,7 +153,9 @@
 }
 /* ===== VARIÁVEIS E RESET ===== */
 :root {
-  --primary: #00f7ff;
+  --primary: #f9266b;
+  --primary-dark: #c81d4e;
+  --primary-light: #ff4f8a;
   --dark: #0a0a0a;
   --darker: #050505;
   --light: #ffffff;
@@ -359,8 +445,8 @@ body {
 .cta-button-hero {
   display: inline-block;
   padding: 22px 60px;
-  background: linear-gradient(135deg, var(--primary), #00d4dd);
-  color: var(--dark);
+    background: var(--primary);
+    color: #fff;
   text-decoration: none;
   font-weight: 800;
   font-size: 1.3rem;
@@ -373,10 +459,10 @@ body {
 }
 
 .cta-button-hero:hover {
-  background: var(--light);
-  color: var(--dark);
+  background: var(--primary-light);
+  color: #fff;
   transform: translateY(-8px) scale(1.08);
-  box-shadow: 0 20px 50px rgba(0, 247, 255, 0.6);
+  box-shadow: 0 20px 50px #f9266b55;
 }
 
 @keyframes neonGlow {

@@ -1,3 +1,21 @@
+// ===== MENU MOBILE =====
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+    // Fecha o menu ao clicar em um link
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        menuToggle.classList.remove('active');
+      });
+    });
+  }
+});
 // ===== MODAL DE IMAGEM EM TELA CHEIA PARA RESULTADOS =====
 window.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('modal-imagem');
