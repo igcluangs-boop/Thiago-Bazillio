@@ -350,6 +350,29 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ===== FAQ ACCORDION =====
+document.addEventListener('DOMContentLoaded', function() {
+  const faqCards = document.querySelectorAll('[data-faq]');
+  
+  faqCards.forEach(card => {
+    const question = card.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      const isActive = card.classList.contains('active');
+      
+      // Fecha todos os outros cards
+      faqCards.forEach(otherCard => {
+        if (otherCard !== card) {
+          otherCard.classList.remove('active');
+        }
+      });
+      
+      // Toggle do card clicado
+      card.classList.toggle('active');
+    });
+  });
+});
+
 const style = document.createElement('style');
 style.textContent = `
   @keyframes rainbow {
