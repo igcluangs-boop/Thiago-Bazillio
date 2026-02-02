@@ -1,3 +1,84 @@
+/* ===== PARA QUEM É ESSA CONSULTORIA ===== */
+.forwho-title {
+  color: var(--primary);
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+.forwho-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+
+.forwho-card {
+  background: #181818;
+  border-radius: 16px;
+  box-shadow: 0 0 18px #ff2e6e22;
+  padding: 1.3rem 1.2rem;
+  min-width: 220px;
+  max-width: 270px;
+  color: #fff;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+.forwho-card:hover {
+  box-shadow: 0 0 32px #ff2e6e88, 0 0 18px #fff2;
+}
+.forwho-icon {
+  font-size: 2.1rem;
+  margin-right: 0.2rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px #ff2e6e88);
+}
+
+.forwho-diferenciais-modern {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.forwho-bad-modern, .forwho-good-modern {
+  background: #181818;
+  border-radius: 14px;
+  box-shadow: 0 0 12px #ff2e6e22;
+  padding: 1.2rem 1.1rem 1.1rem 1.1rem;
+  min-width: 220px;
+  max-width: 270px;
+  color: #fff;
+  font-size: 1.01rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.forwho-bad-title {
+  color: #ff2e6e;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.forwho-good-title {
+  color: var(--primary);
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.forwho-bad-modern ul, .forwho-good-modern ul {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+.forwho-bad-modern li, .forwho-good-modern li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
 /* ===== DIFERENCIAIS DA CONSULTORIA ===== */
 .process-diferenciais {
   margin-top: 2.5rem;
@@ -8,6 +89,26 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+/* Brilho extra para diferenciais */
+.diferenciais-brilho {
+    background: #111;
+    border-radius: 20px;
+    padding: 28px 28px 18px 28px;
+    margin-top: 32px;
+    box-shadow:
+        0 0 32px 0 #ff2e6e88,
+        0 0 12px 2px #fff2,
+        0 0 80px 0 #ff2e6e22;
+    max-width: 370px;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.13rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    transition: box-shadow 0.3s;
+    position: relative;
+    z-index: 2;
 }
 .process-diferenciais-title {
   font-size: 1.45rem;
@@ -710,13 +811,14 @@ body {
 }
 }
 
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
+/* Espaçamento melhorado para parágrafos do sobre mim */
 .about-content p {
+  margin-bottom: 1.7rem;
+  font-size: 1.13rem;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.85;
+}
   font-size: 1.2rem;
   line-height: 2;
   color: var(--gray);
