@@ -1,3 +1,17 @@
+/* Centralizar a caixa de diferenciais */
+.process-diferenciais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 2.5rem auto;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+.diferenciais-brilho {
+  margin: 0 auto;
+}
 /* ===== PARA QUEM É ESSA CONSULTORIA ===== */
 .forwho-title {
   color: var(--primary);
